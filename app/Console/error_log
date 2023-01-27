@@ -1,0 +1,4 @@
+[09-Oct-2022 11:44:53 UTC] PHP Fatal error:  Uncaught Error: Class 'Illuminate\Foundation\Console\Kernel' not found in /home/amdadulhaque/project.test.amdadulhaque.dev/app/Console/Kernel.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/amdadulhaque/project.test.amdadulhaque.dev/app/Console/Kernel.php on line 8

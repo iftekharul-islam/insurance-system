@@ -1,0 +1,103 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jan 08, 2023 at 09:50 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `loan`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recived_loans`
+--
+
+CREATE TABLE `recived_loans` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `loan_id` bigint(20) NOT NULL,
+  `recived_amount` double(8,2) DEFAULT NULL,
+  `loanInstallment_remarks` varchar(255) DEFAULT NULL,
+  `due_amount` double(8,2) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `recived_loans`
+--
+
+INSERT INTO `recived_loans` (`id`, `loan_id`, `recived_amount`, `loanInstallment_remarks`, `due_amount`, `created_at`, `updated_at`) VALUES
+(1, 1, 510.00, NULL, 19490.00, '2022-11-07 12:34:26', '2023-01-04 15:11:44'),
+(2, 3, 510.00, NULL, 59490.00, '2022-11-07 14:31:16', '2023-01-04 15:11:44'),
+(3, 3, 510.00, NULL, 58980.00, '2022-11-07 14:31:33', '2023-01-04 15:11:44'),
+(4, 3, 1270.00, NULL, 57710.00, '2022-11-08 08:54:18', '2023-01-04 15:11:44'),
+(5, 6, 510.00, NULL, 19490.00, '2022-11-08 10:56:21', '2023-01-04 15:11:44'),
+(6, 6, 510.00, NULL, 18980.00, '2022-11-08 10:56:39', '2023-01-04 15:11:44'),
+(7, 3, 1270.00, NULL, 56440.00, '2022-11-08 10:57:40', '2023-01-04 15:11:44'),
+(8, 7, 1270.00, NULL, 48730.00, '2022-11-09 09:58:24', '2022-08-31 18:00:00'),
+(9, 3, 1270.00, NULL, 55170.00, '2022-11-09 10:33:08', '2023-01-04 15:11:44'),
+(10, 6, 510.00, NULL, 18470.00, '2022-11-14 08:53:31', '2023-01-04 15:11:44'),
+(11, 7, 1270.00, NULL, 47460.00, '2022-11-16 10:08:52', '2022-09-30 18:00:00'),
+(12, 13, 760.00, NULL, 29240.00, '2022-11-22 15:43:55', '2023-01-04 15:11:44'),
+(13, 7, 1270.00, NULL, 46190.00, '2022-11-23 14:32:10', '2022-10-04 15:11:44'),
+(14, 10, 887.00, NULL, 34113.00, '2022-11-23 14:33:19', '2023-01-04 15:11:44'),
+(15, 10, 887.00, NULL, 33226.00, '2022-11-30 16:47:15', '2023-01-04 15:11:44'),
+(16, 13, 760.00, NULL, 28480.00, '2022-12-01 08:48:30', '2023-01-04 15:11:44'),
+(17, 6, 1020.00, NULL, 17450.00, '2022-12-01 08:49:15', '2023-01-04 15:11:44'),
+(18, 7, 1270.00, NULL, 44920.00, '2022-12-04 09:24:05', '2022-10-31 18:00:00'),
+(19, 13, 760.00, NULL, 27720.00, '2022-12-07 10:18:47', '2023-01-04 15:11:44'),
+(20, 7, 1270.00, NULL, 43650.00, '2022-12-08 15:17:19', '2022-11-30 18:00:00'),
+(21, 10, 887.00, NULL, 32339.00, '2022-12-08 15:18:23', '2023-01-04 15:11:44'),
+(22, 13, 760.00, NULL, 26960.00, '2022-12-14 09:22:12', '2023-01-04 15:11:44'),
+(23, 6, 510.00, NULL, 16940.00, '2022-12-14 09:23:51', '2023-01-04 15:11:44'),
+(24, 6, 510.00, NULL, 16430.00, '2022-12-14 09:24:36', '2023-01-04 15:11:44'),
+(29, 13, 760.00, NULL, 26200.00, '2022-12-21 13:37:17', '2023-01-04 15:11:44'),
+(30, 13, 760.00, NULL, 25440.00, '2022-12-22 10:14:47', '2023-01-04 15:11:44'),
+(32, 10, 1774.00, NULL, 30565.00, '2022-12-22 15:45:02', '2023-01-04 15:11:44'),
+(33, 13, 760.00, NULL, 24680.00, '2022-12-28 11:24:32', '2023-01-04 15:11:44'),
+(38, 7, 100.00, NULL, 35600.00, '2023-01-04 12:03:47', '2023-01-04 12:03:47'),
+(39, 7, 101.00, NULL, 35499.00, '2023-01-04 12:06:23', '2023-01-04 12:06:23'),
+(40, 7, 100.00, NULL, 35399.00, '2023-01-04 14:25:53', '2023-01-04 14:25:53'),
+(41, 7, 122.00, NULL, -14718.00, '2023-01-08 18:19:19', '2023-01-08 18:19:19'),
+(42, 7, 1222.00, NULL, -15940.00, '2023-01-08 20:26:30', '2023-01-08 20:26:30'),
+(43, 7, NULL, 'no cash', -15940.00, '2023-01-08 20:29:27', '2023-01-08 20:29:27');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `recived_loans`
+--
+ALTER TABLE `recived_loans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `recived_loans`
+--
+ALTER TABLE `recived_loans`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

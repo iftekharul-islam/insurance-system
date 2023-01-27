@@ -1,0 +1,74 @@
+	<style type="text/css">
+		@media only screen and (max-width: 600px) {
+  #nav{
+    background: #fff !important;
+    height: 70px !important;
+  }
+  #logo-sec{
+  	padding-top: 53px !important;
+
+  }
+}
+@php
+   $data = DB::table('site_settings')->get();
+@endphp
+@foreach($data as $data)
+@endforeach
+	</style>
+	<header class="header-section" style="    border-bottom: 3px solid #fff;">
+		<div class="header-top" style="background:#039a4e !important;">
+			<div class="row m-0">
+				<div class="col-md-6 d-none d-md-block p-0">
+					
+					<div class="header-info" style="margin-top: 5px;">
+						<i class="material-icons" style="font-size: 19px;color:#fff !important;" >phone</i>
+						<p style="font-size: 18px;margin-top: -10px !important;color: #fff !important;">+{{$data->mobile_no}}</p>
+					</div>
+				</div>
+				<div class="col-md-6 text-left text-md-right p-0" style="    margin-top: 6px !important;">
+               
+					<div class="header-info d-none d-md-inline-flex">
+						<div id="fb" style="width: 35px;background: #000000;height: 35px;border-radius: 66px;padding: 0px;">
+							<a href="{{$data->fb_link}}" target="_blank">
+								<i class="fa-brands fa-facebook" style="
+							color: #ffffff;justify-content: center;padding: 5px;margin-left: 4px;"></i>
+							</a>
+						</div>
+						
+					</div>
+					
+					<div class="header-info d-none d-md-inline-flex">
+						<div id="insta" style="width: 35px;background: #000000;height: 35px;border-radius: 66px;padding: 0px;">
+							<a href="{{$data->insta_link}}" target="_blank">
+								<i class="fa-brands fa-instagram" style="
+							color: #ffffff;justify-content: center;padding: 5px;margin-left: 5px;"></i>
+							</a>
+						</div>
+						
+					</div>
+					<div class="header-info d-none d-md-inline-flex">
+						<div id="twiter" style="width: 35px;background: #000000;height: 35px;border-radius: 66px;padding: 0px;">
+							<a href="{{$data->twitter_link}}" target="_blank">
+								<i class="fa-brands fa-twitter" style="
+							color: #ffffff;justify-content: center;padding: 5px;margin-left: 5px;"></i>
+							</a>
+						</div>
+						
+					</div>
+					<div class="header-info d-none d-md-inline-flex">
+						<div id="linkdin" style="width: 35px;background: #000000;height: 35px;border-radius: 66px;padding: 0px;">
+							<a href="{{$data->linkdin_link}}" target="_blank">
+								<i class="fa-brands fa-linkedin" style="
+							color: #ffffff;justify-content: center;padding: 5px;margin-left: 5px;"></i>
+							</a>
+						</div>
+						
+					</div>
+					
+				
+				</div>
+			</div>
+		</div>
+		
+	</header>
+
